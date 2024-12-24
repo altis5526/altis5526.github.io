@@ -14,6 +14,6 @@ Besides baseball analysis, MedCY wrote popular science articles and jotted down 
 Nice to meet you guys, and hope you find something interesting in my site! 
 
 
-- [Resume](https://altis5526.github.io/CV)
+- [Resume](https://drive.google.com/file/d/1CF0Cnndg1kNs3OH58fnEHQ2qL3Y2YF_V/view?usp=drive_link)
 - [MedCY運動視界專欄連結](https://www.sportsv.net/authors/MedCY)
 - [醫病平台／與癌症末期的病人站在同一線 醫生能夠相信奇蹟嗎？](https://health.udn.com/health/story/6001/5417542)
