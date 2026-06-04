@@ -1,4 +1,4 @@
-# Lei Hsiung website
+# Chi-Yu Chen website
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
