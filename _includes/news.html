@@ -1,0 +1,42 @@
+          <div class="news">
+            <h2>latest news</h2>
+            <div class="table-responsive">
+              <table class="table table-sm table-borderless" id="latest-news-csv">
+              <div id="latest_news_loading" class="loader">Loading...</div>
+              </table>
+            </div>
+          </div>
+          <script>
+            function tsv2table(data){
+			  let rows = data.split("\n");
+			  for (let i = 0; i < rows.length; i++) {
+			    if (!rows[i].includes("\t")) throw new Error("Fetch Error.");
+			    let cells = rows[i].split("\t");
+			    let row = table.insertRow();
+			    
+			    th = document.createElement('th');
+			    th.setAttribute("scope","row");
+			    th.innerText = cells[0];
+			    row.appendChild(th);
+			    
+			    cell = row.insertCell();
+			    cell.innerHTML = cells[1];
+			  }
+			}
+			let table = document.getElementById("latest-news-csv");
+			fetch("{{ site.news_source }}").then(function(response){
+			if (!response.ok) throw new Error("Not 2xx response", {cause: response});
+			else {
+			  document.getElementById("latest_news_loading").style.display = "none";
+			  response.text().then(data => tsv2table(data));
+			}
+			}).catch(error => {
+			  console.log("Events not up-to-date.");
+			  document.getElementById("latest_news_loading").style.display = "none";
+			  fetch("{{ site.news_source_local }}").then(response => response.text()).then(data => tsv2table(data)).catch(error => {
+			    console.log(error);
+			    table.innerHTML="<p style=\"color: #bababa;\">Unable to fetch data right now. Please try again later.</p>"
+			  });
+			});
+			
+          </script>

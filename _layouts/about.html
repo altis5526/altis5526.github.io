@@ -1,0 +1,140 @@
+---
+layout: default
+---
+
+<!-- about.html -->
+      <div class="post">
+        <header class="post-header">
+          <div class="post-title">
+          <h1 class="post-title">
+              {% if site.title == "blank" -%}{{ site.first_name }} {{ site.middle_name }} <span class="font-weight-bold">{{ site.last_name }}</span>{%- else -%}{{ site.title }}{%- endif %}
+          </h1>
+          {% if page.chi_name.display == true %}<span class="alter-post-title"><img src="{{ page.chi_name.image | prepend: 'assets/img/'  }}" /></span>{% endif %}
+          </div>
+          <p class="desc">{{ page.subtitle }}</p>
+        </header>
+
+        <article>
+          {% if page.profile -%}
+          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
+            {%- if page.profile.image %}
+            <figure>
+              <picture>
+                <img class="img-fluid z-dept-1 rounded" src="{{ page.profile.image| prepend: 'assets/img/' }}" alt="profile photo">
+              </picture>
+            </figure>
+            {% endif -%}
+          {%- if page.social %}
+          <!-- Social -->
+          <div class="social">
+            <div class="contact-icons">
+            {% include social.html %}
+            </div>
+
+            <div class="contact-note">
+              {{ site.contact_note }}
+            </div>
+
+          </div>
+          {%- endif %}
+            {%- if page.profile.address %}
+            <div class="address">
+              {{ page.profile.address }}
+            </div>
+            {%- endif %}
+          </div>
+          {%- endif %}
+
+          <div class="clearfix description">
+            {{ content }}
+          </div>
+
+          {% if page.news -%}
+          <!-- News -->
+          {%- include news.html %}
+          {%- endif %}
+
+          <!-- ============================================================ -->
+          <!-- RESUME SECTION -->
+          <!-- ============================================================ -->
+          {% if page.resume %}
+          <div class="resume-section mt-5">
+            <hr>
+            <h2>{{ page.resume_title | default: "Resume / CV" }}</h2>
+            <p>
+              <a href="{{ page.resume_url | default: '/assets/cv.pdf' }}" class="btn btn-sm z-depth-0 waves-effect waves-light btn-outline-primary font-weight-light" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-pdf mr-1"></i> {{ page.resume_button | default: "Download CV" }}
+              </a>
+            </p>
+          </div>
+          {% endif %}
+
+          <!-- ============================================================ -->
+          <!-- EXPERIENCE SECTION -->
+          <!-- ============================================================ -->
+          {% if page.experience %}
+          <div class="experience-section mt-5">
+            <hr>
+            <h2>{{ page.experience_title | default: "Experience" }}</h2>
+            {% if page.experiences %}
+              {% for exp in page.experiences %}
+              <div class="experience-item mb-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <h4 class="mb-0">{{ exp.title }}</h4>
+                    <p class="text-muted mb-1">{{ exp.organization }}</p>
+                  </div>
+                  <span class="badge badge-light text-muted">{{ exp.duration }}</span>
+                </div>
+                {% if exp.description %}
+                <p class="mt-2 mb-0">{{ exp.description }}</p>
+                {% endif %}
+              </div>
+              {% endfor %}
+            {% else %}
+            <!-- Placeholder: Add your experiences in the page front matter -->
+            <p class="text-muted font-italic">Experience details coming soon.</p>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          <!-- ============================================================ -->
+          <!-- SELECTED PUBLICATIONS SECTION -->
+          <!-- ============================================================ -->
+          {% if page.selected_papers -%}
+            <!-- Selected papers -->
+            {%- include selected_papers.html %}
+          {%- endif %}
+
+          {% if page.publications %}
+          <div class="publications-section mt-5">
+            <hr>
+            <h2>{{ page.publications_title | default: "Selected Publications" }}</h2>
+            {% if page.pub_list %}
+              <ol class="bibliography">
+              {% for pub in page.pub_list %}
+              <li>
+                {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener noreferrer">{% endif %}
+                <strong>{{ pub.title }}</strong>
+                {% if pub.url %}</a>{% endif %}
+                <br>
+                <em>{{ pub.authors }}</em>
+                <br>
+                {{ pub.venue }}{% if pub.year %}, {{ pub.year }}{% endif %}
+                {% if pub.award %}<br><span class="badge badge-warning">🏆 {{ pub.award }}</span>{% endif %}
+              </li>
+              {% endfor %}
+              </ol>
+            {% else %}
+            <!-- Placeholder: Add your publications in the page front matter -->
+            <p class="text-muted font-italic">Publications coming soon.</p>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          {% if page.highlights -%}
+          {%- include highlights.html %}
+          {%- endif %}
+        </article>
+
+</div>

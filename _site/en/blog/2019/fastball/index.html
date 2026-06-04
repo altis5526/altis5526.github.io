@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head><!-- Metadata, OpenGraph and Schema.org -->
+
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer">
+    <title>Chi-Yu (Tommy) Chen | The Fastball Paradox - Why Pitchers Keep Throwing What Batters Hit Best</title>
+    <meta name="author" content="Chi-Yu  Chen" />
+    <meta name="description" content="這個網頁起源於一個從小喜歡棒球的菜鳥醫學生--MedCY。
+" />
+    <meta name="keywords" content="Chi-Yu Chen, Chen, UIUC, NTUH, NYCU, Medical AI, Machine Learning, Deep Learning, Trustworthy AI" />
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css"
+    integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css"
+    integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css"
+    media="none" id="highlight_theme_light" />
+
+<!-- Styles -->
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/img/icon/prof_pic.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/icon/prof_pic.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/assets/img/icon/prof_pic.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icon/prof_pic.png">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/en/blog/2019/fastball/">
+
+    
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav sticky-bottom-footer">
+
+    <!-- Header --><header>
+
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand title font-weight-lighter" href="http://localhost:4000/">Chi-Yu (Tommy) Chen</a>
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+
+          
+          <!-- English nav -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/en/">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/en/blog/">Blog</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/en/projects/">Projects</a>
+          </li>
+          
+          <!-- Language Toggle -->
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/blog/2019/fastball/">中文</a>
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <!-- _layouts/post.html -->
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">The Fastball Paradox - Why Pitchers Keep Throwing What Batters Hit Best</h1>
+    <p class="post-meta">August 3, 2019</p>
+    <p class="post-tags">
+      <a href="/blog/2019"> <i class="fas fa-calendar fa-sm"></i> 2019 </a>
+        ·  
+        <a href="/blog/category/Baseball%20Analysis">
+          <i class="fas fa-tag fa-sm"></i> Baseball Analysis</a>  
+          
+
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>“Swing and a miss! The radar gun shows a <strong>100 mph heater</strong>!!”</p>
+
+<p>I wonder if you’re like me—every time a pitcher bravely challenges a hitter with a high-velocity fastball in a clutch moment, I can’t help but get an adrenaline rush and stay glued to the screen!</p>
+
+<p><img src="https://i.imgur.com/xMraHDS.jpg" alt=""></p>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="embed-container"><iframe src="https://streamable.com/m/statcast-scherzer-nose-heaters" frameborder="0" allowfullscreen=""></iframe></div>
+
+<p><ins>Flashback: Max Scherzer takes the mound with a broken nose and throws his fastest pitches in years.</ins></p>
+
+<p>The pitch type with the <strong>highest usage rate</strong> in MLB every year is the exhilarating <strong>fastball</strong>. Relying heavily on the heater is a long-standing tradition in baseball philosophy. However, over the past five years, the league-wide usage of fastballs has gradually declined, dropping from <strong>57.7% in 2015 to 52.6% this year</strong>. Why is this happening?</p>
+
+<p>If you look closely at advanced metrics for hitters against fastballs, you’ll find that whether it’s traditional Batting Average or <strong>wOBA</strong>, the pitch type hitters handle best is exactly what pitchers love to throw most: the fastball (Table 1).</p>
+
+<h3 id="table-1-2019-offensive-metrics-comparison-by-pitch-type"><strong>Table 1: 2019 Offensive Metrics Comparison by Pitch Type</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Metric</th>
+      <th style="text-align: center">Fastball</th>
+      <th style="text-align: center">Off-speed (Changeup/Splitter)</th>
+      <th style="text-align: center">Breaking Ball</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>Opponent BA</strong></td>
+      <td style="text-align: center"><strong>.275</strong></td>
+      <td style="text-align: center">.229</td>
+      <td style="text-align: center">.221</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>wOBA</strong></td>
+      <td style="text-align: center"><strong>.354</strong></td>
+      <td style="text-align: center">.284</td>
+      <td style="text-align: center">.278</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You might argue that this comparison isn’t entirely fair. Off-speed and breaking balls are often used as “chase” pitches outside the zone, whereas fastballs are frequently thrown inside the strike zone to get ahead in the count. Naturally, hitters will perform better against balls in the zone.</p>
+
+<p>To address this concern, let’s compare the metrics for pitches <strong>specifically located within the “Strike Zone.”</strong> If a ball is in the zone and the hitter still crushes it, the “chase pitch” excuse no longer applies.</p>
+
+<h3 id="table-2-2019-offensive-metrics-for-pitches-inside-the-strike-zone"><strong>Table 2: 2019 Offensive Metrics for Pitches INSIDE the Strike Zone</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Metric</th>
+      <th style="text-align: center">Fastball</th>
+      <th style="text-align: center">Off-speed (Changeup/Splitter)</th>
+      <th style="text-align: center">Breaking Ball</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>Opponent BA</strong></td>
+      <td style="text-align: center"><strong>.302</strong></td>
+      <td style="text-align: center">.271</td>
+      <td style="text-align: center">.279</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>wOBA</strong></td>
+      <td style="text-align: center"><strong>.350</strong></td>
+      <td style="text-align: center">.320</td>
+      <td style="text-align: center">.325</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As shown above, <strong>fastballs are still hit significantly harder than the other two categories, even when all pitches are in the strike zone.</strong> This suggests that fastballs are simply easier to hit. This data has begun to shift the tactical landscape of MLB: <em>If fastballs are so easy to hit, why keep throwing them so much?</em></p>
+
+<hr>
+
+<h2 id="the-pioneers-the-yankees-low-fastball-strategy"><strong>The Pioneers: The Yankees’ Low-Fastball Strategy</strong></h2>
+
+<p>According to a <a href="https://www.si.com/mlb/2017/07/19/new-york-yankees-fastball-rate" target="_blank" rel="noopener noreferrer">2017 report by Sports Illustrated</a>, the <strong>New York Yankees</strong> were one of the first teams to pivot. Then-pitching coach Larry Rothschild noted:</p>
+
+<blockquote>
+  <p>“Fastballs get hit. For me, it’s amazing that fastballs over 95 mph get hit as easily as they do. I don’t know how they do it, but these are Major League hitters. They get used to the speed and adjust. If they want to hit 95+, they just speed up their bat. Once they adjust, it doesn’t matter how fast you throw; they can hit it.”</p>
+</blockquote>
+
+<p>Consequently, in 2017, the Yankees’ fastball usage rate was the <strong>lowest in MLB at 44.9% (Figure 1)</strong>—3.4 percentage points lower than the second-place Indians. The result? The Yankees’ pitching staff performed excellently, ranking <strong>5th in the league in both ERA and FIP</strong>.</p>
+
+<p><img src="https://i.imgur.com/h2xLGUo.png" alt="">
+<em>Figure 1</em></p>
+
+<p>However, the success of the 2017 Yankees can’t be attributed <em>solely</em> to dropping fastballs. They had elite talent like Luis Severino (3rd in Cy Young voting) and a powerhouse bullpen featuring David Robertson, Chad Green, Dellin Betances, Tommy Kahnle, and Aroldis Chapman. Most of these relievers still relied on high-octane heaters.</p>
+
+<p>The biggest driver of the drop was actually <strong>CC Sabathia</strong>. In 2016, his four-seam fastball usage was 35.7%; by 2017, he almost entirely abandoned it, using it only <strong>0.3% of the time (Figure 2)</strong>. This was likely a survival tactic due to aging and declining velocity rather than a team-wide epiphany about fastballs. In fact, since 2017, the Yankees have increased their fastball usage back to 52.3%, suggesting the “extreme low-fastball” strategy might not have been a universal panacea.</p>
+
+<p><img src="https://i.imgur.com/KnOGmD7.png" alt="">
+<em>Figure 2: CC Sabathia’s Pitch Selection (Blue arrow shows the drop in 4-seam usage in 2017)</em></p>
+
+<hr>
+
+<h2 id="a-success-story-the-charlie-morton-transformation"><strong>A Success Story: The Charlie Morton Transformation</strong></h2>
+
+<p>Is there a clear-cut case of a pitcher improving by ditching the fastball? Look no further than <strong>Charlie Morton</strong>, a top AL Cy Young candidate this year.</p>
+
+<p>Since roughly 2015, Morton has <strong>gradually decreased his most-used pitch, the sinker, while making his curveball his primary weapon (Figure 3).</strong> The reason is simple: advanced data showed that <strong>the sinker was never his best pitch (Table 3).</strong></p>
+
+<p><img src="https://i.imgur.com/sJsvnet.png" alt="">
+<em>Figure 3: Charlie Morton’s pitch usage over time (Orange: Sinker, Sky Blue: Curveball)</em></p>
+
+<h3 id="table-3-mortons-sinker-vs-curveball-performance"><strong>Table 3: Morton’s Sinker vs. Curveball Performance</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Year</th>
+      <th style="text-align: left">Pitch Type</th>
+      <th style="text-align: center">Opponent BA</th>
+      <th style="text-align: center">wOBA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>2015</strong></td>
+      <td style="text-align: left">Sinker</td>
+      <td style="text-align: center"><strong>.317</strong></td>
+      <td style="text-align: center"><strong>.361</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Curveball</td>
+      <td style="text-align: center">.144</td>
+      <td style="text-align: center">.224</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>2017</strong></td>
+      <td style="text-align: left">Sinker</td>
+      <td style="text-align: center"><strong>.302</strong></td>
+      <td style="text-align: center"><strong>.373</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Curveball</td>
+      <td style="text-align: center">.114</td>
+      <td style="text-align: center">.176</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>2019</strong></td>
+      <td style="text-align: left">Sinker</td>
+      <td style="text-align: center"><strong>.317</strong></td>
+      <td style="text-align: center"><strong>.365</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Curveball</td>
+      <td style="text-align: center">.134</td>
+      <td style="text-align: center">.160</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Interestingly, <strong>2015 was the year Statcast was officially launched</strong>. Morton likely saw these metrics and decided to pivot. Since then, his <strong>ERA has dropped from 4.81 to 2.78</strong>. His strikeout ability also exploded; before 2015, his K/9 never topped 9.0. This year, it’s at a <strong>career-high 10.92 (Figure 4).</strong></p>
+
+<p><img src="https://i.imgur.com/4e7wNpY.png" alt="">
+<em>Figure 4: Charlie Morton’s K/9 increasing as his ERA decreases post-2015.</em></p>
+
+<hr>
+
+<h2 id="should-the-whole-league-ditch-the-fastball"><strong>Should the Whole League Ditch the Fastball?</strong></h2>
+
+<p>To see if this trend holds league-wide, I analyzed the relationship between the change in fastball usage and the change in FIP from 2018 to 2019 (Figure 5).</p>
+
+<p><img src="https://i.imgur.com/Xtbl6Y3.png" alt="">
+<em>Figure 5</em></p>
+
+<p>The horizontal axis shows the difference in fastball percentage (positive means usage decreased). The vertical axis shows the difference in FIP (positive means FIP decreased/improved). The trend line shows a positive slope: <strong>The more a pitcher decreased their fastball usage, the more their FIP tended to improve.</strong></p>
+
+<p>A regression analysis (Figure 6) shows a very small P-value, suggesting that <strong>this model is statistically significant.</strong></p>
+
+<p><img src="https://i.imgur.com/RAgl5zx.png" alt="">
+<em>Figure 6</em></p>
+
+<p>Furthermore, if we look at the top 20 pitchers who reduced their fastball usage most, their FIP barely moved (4.148 to 4.150). However, the top 20 who <em>increased</em> their fastball usage saw their FIP jump from 3.92 to 4.41 (<strong>an increase of 0.49</strong>). In an era of the “juiced ball,” pitchers who threw fewer fastballs held their ground, while those who threw more were punished severely (Table 4).</p>
+
+<h3 id="table-4-2018-vs-2019-fip-comparison"><strong>Table 4: 2018 vs. 2019 FIP Comparison</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Group</th>
+      <th style="text-align: center">2018 Avg FIP</th>
+      <th style="text-align: center">2019 Avg FIP</th>
+      <th style="text-align: center">Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>Top 20 Fastball Reducers</strong></td>
+      <td style="text-align: center">4.148</td>
+      <td style="text-align: center">4.150</td>
+      <td style="text-align: center"><strong>+0.002</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Top 20 Fastball Increasers</strong></td>
+      <td style="text-align: center">3.92</td>
+      <td style="text-align: center">4.41</td>
+      <td style="text-align: center"><strong>+0.49</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>League Average</strong></td>
+      <td style="text-align: center"><strong>4.15</strong></td>
+      <td style="text-align: center"><strong>4.50</strong></td>
+      <td style="text-align: center"><strong>+0.35</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2 id="why-do-pitchers-still-throw-fastballs"><strong>Why Do Pitchers Still Throw Fastballs?</strong></h2>
+
+<p>If hitters crush them, why is the average usage still over 50%? There are a few practical reasons:</p>
+
+<h3 id="1-command-and-control"><strong>1. Command and Control</strong></h3>
+<p>Fastballs are simply easier to control. Data shows that when a pitcher is <strong>behind in the count</strong>, fastballs find the strike zone <strong>38.7%</strong> of the time, while off-speed and breaking balls combined only hit the zone <strong>16.7%</strong> of the time. Pitchers go to the heater when they <em>need</em> a strike.</p>
+
+<h3 id="2-individual-elite-talent"><strong>2. Individual Elite Talent</strong></h3>
+<p>Some pitchers have fastballs that defy the average. <strong>Gerrit Cole</strong> is a prime example. His four-seam fastball has an opponent BA of <strong>.184</strong> (his lowest for any pitch) and an elite spin rate of <strong>2,519 rpm</strong>. He has no reason to throw it less.</p>
+
+<h3 id="3-avoiding-tactical-failure"><strong>3. Avoiding Tactical Failure</strong></h3>
+<p>The case of <strong>Sonny Gray</strong> in 2017 is a warning. When he joined the Yankees, he was forced into their “low-fastball” philosophy. His usage dropped below 50% for the first time in his career, and his FIP skyrocketed to <strong>5.79</strong> in October. Not every pitcher is built to survive without their primary heater.</p>
+
+<h3 id="4-creating-velocity-differential"><strong>4. Creating Velocity Differential</strong></h3>
+<p>Off-speed pitches only work if there is a fast pitch to contrast them with. The greater the <strong>velocity gap</strong>, the more the hitter’s timing is disrupted.</p>
+
+<hr>
+
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+
+<p>When looking at pitches inside the strike zone, the <strong>fastball is, on average, the easiest pitch to hit.</strong> Consequently, the new league-wide trend is to use fewer fastballs and more breaking or off-speed stuff. Statistically, this shift appears effective—without it, the current “juiced ball” era might have sent ERAs even higher.</p>
+
+<p>However, blindly cutting fastballs isn’t the answer for everyone. The fastball is the foundation for getting ahead in the count and the essential setup for making off-speed pitches effective. As the game continues to evolve, we’ll see just how low that fastball percentage can go!</p>
+
+<p><em>(This is a revised version of a previously published article. Thank you to the experts for their corrections!)</em></p>
+
+<p><strong>Data Sources:</strong></p>
+<ol>
+  <li>MLB Statcast: <a href="https://baseballsavant.mlb.com" target="_blank" rel="noopener noreferrer">https://baseballsavant.mlb.com</a>
+</li>
+  <li>FanGraphs</li>
+  <li>Sonny Gray Analysis: <a href="https://blogs.fangraphs.com/the-yankees-no-fastball-approach-might-be-breaking-sonny-gray/" target="_blank" rel="noopener noreferrer">FanGraphs - The Yankees’ No-Fastball Approach</a>
+</li>
+  <li>Larry Rothschild Interview: <a href="https://www.si.com/mlb/2017/07/19/new-york-yankees-fastball-rate" target="_blank" rel="noopener noreferrer">Sports Illustrated</a>
+</li>
+</ol>
+
+<p><strong>Cover Image:</strong> Photo by Lesly Juarez on Unsplash</p>
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->    <footer class="sticky-bottom mt-5">
+      <div class="container">
+        © Copyright 2026 Chi-Yu  Chen. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js" integrity="sha256-l/1pMF/+J4TThfgARS6KwWrk/egwuVvhRzfLAMQ6Ds4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha256-SyTu6CwrfOhaznYZPoolVw2rxoY7lKYKQvqbtqN93HI=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script src="/assets/js/common.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+  </body>
+</html>
+

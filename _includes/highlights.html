@@ -1,0 +1,17 @@
+{% capture teachings %}{% include_relative teachings.md %}{% endcapture %}
+{% capture academic_services %}{% include_relative academic_services.md %}{% endcapture %}
+{% capture interests %}{% include_relative interests.md %}{% endcapture %}
+          <!-- Teachings -->
+          <div class="teachings">
+            {{ teachings | markdownify }}
+          </div>
+
+          <!-- Academic Services -->
+          <div class="academic_services">
+            {{ academic_services | markdownify }}
+          </div>
+
+          <!-- Interests -->
+          <div class="interests">
+            {{ interests | markdownify }}
+          </div>
