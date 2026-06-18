@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "*Against Democracy* – Should Everyone Have the Right to Vote?"
+title: "Against Democracy – Should Everyone Have the Right to Vote?"
 tags: []
 id: '866'
 categories:
