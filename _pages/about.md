@@ -1,7 +1,7 @@
 ---
 layout: about
 title: about
-permalink: /
+permalink: /zh/
 subtitle: 🏛️ University of Illinois Urbana-Champaign / 🏥 National Taiwan University Hospital / 🏛️ National Yang Ming Chiao Tung University MD and CS minor
 profile:
   align: right

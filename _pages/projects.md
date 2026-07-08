@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /projects/
+permalink: /zh/projects/
 title: Projects
 description: MedCY's projects.
 nav: true

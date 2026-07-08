@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /blog/
+permalink: /zh/blog/
 title: Blog
 nav: true
 nav_order: 2

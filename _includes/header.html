@@ -5,7 +5,7 @@
     class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}">
     <div class="container">
       {% if page.title != "about" -%}
-      <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl | prepend: site.url }}/">
+      <a class="navbar-brand title font-weight-lighter" href="{% if page.url contains '/zh/' %}{{ '/zh/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
         {%- if site.title == "blank" -%}{{ site.first_name }} {{ site.middle_name }} <span class="font-weight-bold">{{
           site.last_name }}</span>{%- else -%}{{ site.title }}{%- endif -%}
       </a>
@@ -27,67 +27,35 @@
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
 
-          {% if page.url contains '/en/' %}
-          <!-- English nav -->
-          <li class="nav-item {% if page.url == '/en/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/en/' | relative_url }}">About</a>
+          {% if page.url contains '/zh/' %}
+          <!-- Chinese nav -->
+          <li class="nav-item {% if page.url == '/zh/' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/zh/' | relative_url }}">關於</a>
           </li>
-          <li class="nav-item {% if page.url contains '/en/blog' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/en/blog/' | relative_url }}">Blog</a>
+          <li class="nav-item {% if page.url contains '/zh/blog' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/zh/blog/' | relative_url }}">部落格</a>
           </li>
-          <li class="nav-item {% if page.url contains '/en/projects' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/en/projects/' | relative_url }}">Projects</a>
+          <li class="nav-item {% if page.url contains '/zh/projects' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/zh/projects/' | relative_url }}">專案</a>
           </li>
           {% else %}
-          <!-- Chinese nav -->
-          <li class="nav-item {% if page.title == 'about' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">About
-              {%- if page.title == "about" -%}
-              <span class="sr-only">(current)</span>
-              {%- endif -%}
-            </a>
+          <!-- English nav -->
+          <li class="nav-item {% if page.url == '/' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/' | relative_url }}">About</a>
           </li>
-
-          <!-- Other pages -->
-          {%- assign sorted_pages = site.pages | sort: "order" -%}
-          {%- for p in sorted_pages -%}
-          {%- if p.nav and p.autogen == nil -%}
-          {%- if p.dropdown %}
-          <li class="nav-item dropdown {% if page.title == p.title %}active{% endif %}">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">{{ p.title }}
-              {%- if page.title == p.title -%}
-              <span class="sr-only">(current)</span>
-              {%- endif -%}
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              {%- for child in p.children -%}
-              {%- if child.title == 'divider' %}
-              <div class="dropdown-divider"></div>
-              {%- else %}
-              <a class="dropdown-item" href="{{ child.permalink | relative_url }}">{{ child.title }}</a>
-              {%- endif -%}
-              {% endfor %}
-            </div>
+          <li class="nav-item {% if page.url contains '/blog' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/blog/' | relative_url }}">Blog</a>
           </li>
-          {%- else %}
-          <li class="nav-item {% if page.title == p.title %}active{% endif %}">
-            <a class="nav-link" href="{{ p.url | relative_url }}">{{ p.title }}
-              {%- if page.title == p.title -%}
-              <span class="sr-only">(current)</span>
-              {%- endif -%}
-            </a>
+          <li class="nav-item {% if page.url contains '/projects' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/projects/' | relative_url }}">Projects</a>
           </li>
-          {%- endif -%}
-          {%- endif -%}
-          {% endfor -%}
           {% endif %}
           <!-- Language Toggle -->
           <li class="nav-item">
-            {% if page.url contains '/en/' %}
-            <a class="nav-link" href="{{ page.url | remove_first: '/en' | relative_url }}">中文</a>
+            {% if page.url contains '/zh/' %}
+            <a class="nav-link" href="{{ page.url | remove_first: '/zh' | relative_url }}">English</a>
             {% else %}
-            <a class="nav-link" href="{{ '/en' | append: page.url | relative_url }}">English</a>
+            <a class="nav-link" href="{{ '/zh' | append: page.url | relative_url }}">中文</a>
             {% endif %}
           </li>
           {%- if site.enable_darkmode %}

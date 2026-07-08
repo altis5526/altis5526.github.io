@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /en/blog/
+permalink: /blog/
 title: blog
 nav: false
 pagination:
