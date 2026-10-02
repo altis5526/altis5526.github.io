@@ -17,7 +17,7 @@ order: 1
 
 resume: true
 resume_title: 履歷
-resume_url: https://drive.google.com/file/d/1UWBal5PKpyEhMaiiPul99k3Zu0FnJyUC/view?usp=drive_link
+resume_url: https://drive.google.com/file/d/1z6wWr62zP3doywj4-7ztXF4cPxw12_HY/view?usp=sharing
 resume_button: 下載履歷 (PDF)
 
 experience: true
